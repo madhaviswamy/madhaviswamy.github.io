@@ -12,19 +12,21 @@
 ### Testing
 ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 
-This is a bare-bones example of a Sinatra application providing a REST
-API to a DataMapper-backed model.
-This Application lets a User reserve a book, movie or a periodical from the Website. The UI is connected to a Springboot backend and MySql database.
+Welcome to the Library Reservation System! This project provides a simple reservation system for books, movies, and periodicals through user-friendly web interface. Users can browse available items and make reservations online. 
 
+The UI is connected to a Springboot backend and MySql database.
 The entire application is contained within the `LibraryCapstone` folder with the UI and backend in separate folders. Every
 
-`config.ru` is a minimal Rack configuration for unicorn.
+## Setup Instructions
+To set up and run the application locally, follow these steps:
 
-`run-tests.sh` runs a simplistic test and generates the API
-documentation below.
+    git clone https://github.com/Irenexp/LibraryCapstone.git
 
-It uses `run-curl-tests.rb` which runs each command defined in
-`commands.yml`.
+## Contributors
+Andrew Swinney (@andrewswinney)
+Madhavi Swamy (@madhaviswamy)
+Shurun Liu (@Irenexp)
+Toluwa Adetomiwa (@twg23)
 
 ## Install
 
