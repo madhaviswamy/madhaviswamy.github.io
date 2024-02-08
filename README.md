@@ -24,8 +24,11 @@ To set up and run the application locally, follow these steps:
 
 ## Contributors
 Andrew Swinney (@andrewswinney)
+
 Madhavi Swamy (@madhaviswamy)
+
 Shurun Liu (@Irenexp)
+
 Toluwa Adetomiwa (@twg23)
 
 ## Install
