@@ -15,12 +15,19 @@
 Welcome to the Library Reservation System! This project provides a simple reservation system for books, movies, and periodicals through user-friendly web interface. Users can browse available items and make reservations online. 
 
 The UI is connected to a Springboot backend and MySql database.
-The entire application is contained within the `LibraryCapstone` folder with the UI and backend in separate folders. Every
+The entire application is contained within the `LibraryCapstone` folder with the UI and backend in separate folders with a binding Dockerfile.
 
 ## Setup Instructions
 To set up and run the application locally, follow these steps:
 
     git clone https://github.com/Irenexp/LibraryCapstone.git
+    docker-compose up
+    
+Install dependencies at root of UI directory.
+
+    npm install react-bootstrap bootstrap
+    npm install styled-components
+
 
 ## Contributors
 Andrew Swinney (@andrewswinney)
@@ -31,13 +38,9 @@ Shurun Liu (@Irenexp)
 
 Toluwa Adetomiwa (@twg23)
 
-## Install
-
-    bundle install
-
 ## Run the app
 
-    unicorn -p 7000
+    http://localhost:3030
 
 ## Run the tests
 
@@ -47,24 +50,74 @@ Toluwa Adetomiwa (@twg23)
 
 The REST API to the example app is described below.
 
-## Get list of Things
+## Get list of Books
 
 ### Request
 
-`GET /thing/`
+`@GET`
 
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/
+    curl -XGET -H "Content-type: application/json" 'http://localhost:8080/books'
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 2
-
-    []
+   [
+    {
+        "id": 1,
+        "title": "To Kill a Mockingbird",
+        "imgUrl": "https://ls-project-books.s3.eu-west-2.amazonaws.com/to-kill-a-mockingbird.jpg",
+        "genre": "FICTION",
+        "quantity": 30,
+        "available": true
+    },
+    {
+        "id": 2,
+        "title": "1984",
+        "imgUrl": "https://ls-project-books.s3.eu-west-2.amazonaws.com/1984.jpg",
+        "genre": "FICTION",
+        "quantity": 30,
+        "available": true
+    },
+    {
+        "id": 3,
+        "title": "The Great Gatsby",
+        "imgUrl": "https://ls-project-books.s3.eu-west-2.amazonaws.com/the-great-gatsby.jpg",
+        "genre": "ROMANCE",
+        "quantity": 30,
+        "available": true
+    },
+    {
+        "id": 4,
+        "title": "Pride and Prejudice",
+        "imgUrl": "https://ls-project-books.s3.eu-west-2.amazonaws.com/prideandprejudice.jpg",
+        "genre": "ACTION",
+        "quantity": 30,
+        "available": true
+    },
+    {
+        "id": 5,
+        "title": "The Hunger Games",
+        "imgUrl": "https://ls-project-books.s3.eu-west-2.amazonaws.com/the-hunger-games.jpg",
+        "genre": "SCIENTIFIC",
+        "quantity": 30,
+        "available": true
+    },
+    {
+        "id": 6,
+        "title": "The Da Vinci Code",
+        "imgUrl": "https://ls-project-books.s3.eu-west-2.amazonaws.com/da-vinci-codebook.jpg",
+        "genre": "FICTION",
+        "quantity": 30,
+        "available": true
+    },
+    {
+        "id": 7,
+        "title": "The Alchemist",
+        "imgUrl": "https://ls-project-books.s3.eu-west-2.amazonaws.com/the-alchemist.jpg",
+        "genre": "THRILLER",
+        "quantity": 30,
+        "available": true
+    }
+]
 
 ## Create a new Thing
 
