@@ -40,11 +40,7 @@ Toluwa Adetomiwa (@twg23)
 
 ## Run the app
 
-    http://localhost:3030
-
-## Run the tests
-
-    ./run-tests.sh
+    http://localhost:3000
 
 # REST API
 
