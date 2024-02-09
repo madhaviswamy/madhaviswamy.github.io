@@ -124,7 +124,7 @@ The REST API to the example app is described below.
 
 ### Request
 
-`POST`
+`GET`
 
     curl -XGET -H "Content-type: application/json" 'http://localhost:8080/book/author?name=Dan'
 
@@ -139,4 +139,22 @@ The REST API to the example app is described below.
         "quantity": 30,
         "available": true
     }
-]
+    ]
+## Reserve a Book
+
+### Request
+
+`POST`
+
+    curl -XPOST -H "Content-type: application/json" -d '{
+    "itemType": "BOOK",
+    "title": "The Da Vinci Code",
+    "userId": 2,
+    "date": "2023/10/08"
+    }' 'http://localhost:8080/reservations/reserve'
+
+### Response
+
+    [
+    {"id":13,"itemType":"BOOK","date":"2023/10/08","period":7}
+    ]
